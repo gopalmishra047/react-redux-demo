@@ -13,6 +13,10 @@ const Counter = () => {
     dispatch({ type: 'DECREMENT' });
   };
 
+  const increaseByHandler = () => {
+    dispatch({ type: 'INCREASEBY', value: 5 });
+  };
+
   const toggleCounterHandler = () => {};
 
   return (
@@ -20,6 +24,7 @@ const Counter = () => {
       <h1>Redux Counter Functional Component</h1>
       <div className={classes.value}>{counter}</div>
       <button onClick={incrementHandler}>Increment</button>
+      <button onClick={increaseByHandler}>Incrase by 5</button>
       <button onClick={decrementHandler}>Decrement</button>
       <button onClick={toggleCounterHandler}>Toggle Counter</button>
     </main>
